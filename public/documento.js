@@ -1,5 +1,5 @@
 /* eslint-disable require-jsdoc */
-import emitirTextoEditado from './socket-front.js';
+import {emitirTextoEditado} from './socket-front.js';
 const textoEditor = document.getElementById('editor-texto');
 
 textoEditor.addEventListener('keyup', () => {
@@ -10,4 +10,4 @@ function enviaTextoEditor(texto) {
   textoEditor.value = texto;
 };
 
-export default enviaTextoEditor;
+export {enviaTextoEditor};
