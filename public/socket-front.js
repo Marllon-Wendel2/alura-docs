@@ -1,15 +1,12 @@
-/* eslint-disable require-jsdoc */
-import {enviaTextoEditor} from './documento.js';
-// eslint-disable-next-line no-unused-vars
+
+import {atualizaTextoEditor} from './documento.js';
 const socket = io();
 
-
-function emitirTextoEditado(texto) {
-  socket.emit('texto_editor', texto);
-};
-
-socket.on('texto_editor_cliente', (texto) => {
-  enviaTextoEditor(texto);
+function emitirTextoEditor (texto) {
+  socket.emit('texto_editor', texto);}
+  
+  socket.on('texto_editor_cliente', (texto) => {
+  atualizaTextoEditor(texto);
 });
 
-export {emitirTextoEditado};
+export {emitirTextoEditor};

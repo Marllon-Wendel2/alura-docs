@@ -1,13 +1,13 @@
-/* eslint-disable require-jsdoc */
-import {emitirTextoEditado} from './socket-front.js';
-const textoEditor = document.getElementById('editor-texto');
+import { emitirTextoEditor } from "./socket-front-documento.js";
 
-textoEditor.addEventListener('keyup', () => {
-  emitirTextoEditado(textoEditor.value);
+const textoEditor = document.getElementById("editor-texto");
+
+textoEditor.addEventListener("keyup", () => {
+  emitirTextoEditor(textoEditor.value);
 });
 
-function enviaTextoEditor(texto) {
+function atualizaTextoEditor(texto) {
   textoEditor.value = texto;
-};
+}
 
-export {enviaTextoEditor};
+export { atualizaTextoEditor };
