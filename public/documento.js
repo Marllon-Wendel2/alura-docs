@@ -24,9 +24,10 @@ function atualizaTextoEditor(texto) {
 };
 
 function alertarERedirecionar(nome) {
-  alert(`O documento ${nome} foi deletado!`)
-  window.location.href = "/"
-};
+  if(nome === nomeDocumento){
+    alert(`O documento ${nome} foi deletado!`)
+    window.location.href = "/"
+}};
 
 botaoExcluir.addEventListener("click", () => {
   emitirExcliurDocumento(nomeDocumento)
