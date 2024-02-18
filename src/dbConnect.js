@@ -7,7 +7,7 @@ let documentosColecao;
 try {
     await cliente.connect();
 
-    const db = cliente.db("AluraDons");
+    const db = cliente.db(`alura_websockets`);
     documentosColecao = db.collection("documentos");
 
     console.log("conectado ao banco de dados")
@@ -16,4 +16,4 @@ try {
  console.log(erro);
 }
 
-export {documentosColecao };
+export { documentosColecao };
